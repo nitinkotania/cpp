@@ -1,3 +1,11 @@
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
 #include <iostream>
 #include <string>
 
@@ -15,28 +23,28 @@ class employee{
         cout << _name << " employee desctructor " << endl;
     }
     string getName()
-    {
-        
+    {       
         return _name;
     }
 };
 
+template <typename T>
 class mySmartPtr{
-    employee * ptr;
+    T * ptr;
     public:
-        mySmartPtr(employee * obj): ptr(obj)
+        mySmartPtr(T * obj): ptr(obj)
         {
             cout << "inside mySmartPtr const " << endl;
         }
         ~mySmartPtr()
-        {           
+        {         
             delete ptr;
         }
-        employee * operator ->()
+        T * operator ->()
         {
             return ptr;
         }
-        employee & operator *()
+        T & operator *()
         {
             return *ptr;
         }
@@ -45,11 +53,12 @@ class mySmartPtr{
 int main()
 {
     cout<<"Hello World" << endl;
-    mySmartPtr obj (new employee("nitin"));
+    mySmartPtr <employee> obj (new employee("nitin"));
     cout << obj->getName() << endl;
     {
-        mySmartPtr obj1 (new employee("nitin1"));
+        mySmartPtr<employee> obj1 (new employee("nitin1"));
         cout << obj1->getName() << endl;
     }
+
     return 0;
 }
