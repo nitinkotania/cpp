@@ -4,8 +4,8 @@ using namespace std;
 
 class sample{
     public: 
-    string _name;
-    string * _surname;
+        string _name;
+        string * _surname;
         sample() {}
         sample(string name, string surname): _name(name) , _surname(new string(surname)) {}
         
@@ -78,13 +78,13 @@ cout << "-----------------------mv copy---------------------------------------" 
     sample s3(move(s1));
     cout << &s3 << " " << s3._name << " " << *s3._surname << endl;
     cout << &s3 << " " << &s3._name << " " << &(*s3._surname) << endl; 
-    cout << "-->" << &s1 << " " << s1._name ;//<< " " << *s1._surname << endl;
+    cout << "-->" << &s1 << " " << s1._name ;
 cout << "-----------------------mv assignment---------------------------------------" << endl;
     sample s4;
     s4 = std::move(s2);
     cout << &s4 << " " << s4._name << " " << *s4._surname << endl;
     cout << &s4 << " " << &s4._name << " " << &(*s4._surname) << endl; 
-    cout << "-->" << &s2 << " " << s2._name ;//<< " " << *s1._surname << endl;
+    cout << "-->" << &s2 << " " << s2._name ;
 
     return 0;
 }
