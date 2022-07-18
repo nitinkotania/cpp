@@ -6,7 +6,8 @@ class sample{
     public: 
         string _name;
         string * _surname;
-        sample() {}
+        //sample() {}
+        sample():_name(""), _surname(new string()) {}
         sample(string name, string surname): _name(name) , _surname(new string(surname)) {}
         
         //sample(const sample & obj) : _name(obj._name+ "hellboy1 "), _surname(new string(*obj._surname)) { cout << " copy constructor with intializer list  " << endl;}
