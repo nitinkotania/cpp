@@ -1,11 +1,3 @@
-/******************************************************************************
-
-                              Online C++ Compiler.
-               Code, Compile, Run and Debug C++ program online.
-Write your code in this editor and press "Run" button to compile and execute it.
-
-*******************************************************************************/
-
 #include <iostream>
 #include<string>
 #include<climits>
@@ -53,9 +45,7 @@ string minString(string s, string t)
     }    
         if(len == INT_MAX) return "";
         cout << s.substr(head, len) << endl;
-        return s.substr(head, len);
-    
-    
+        return s.substr(head, len);   
 }
 
 int main()
