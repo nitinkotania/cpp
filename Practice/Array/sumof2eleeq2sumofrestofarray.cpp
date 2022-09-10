@@ -11,7 +11,7 @@ bool checkPair(std::vector <int> vec)
 {
 	// Find sum of whole array
 	int sum = 0;
-    for(auto item: vec)
+    	for(auto item: vec)
 		sum += item;
 
 	// If sum of array is not even than we can not
@@ -28,14 +28,12 @@ bool checkPair(std::vector <int> vec)
 		int val = sum - *itr;
 		// If element exist than return the pair
 		auto itr1 = std::find(itr+1, vec.end(), val);
-        if(itr1 != vec.end())
+        	if(itr1 != vec.end())
 		{
-			printf("Pair elements are %d and %d\n",
-								*itr1	, *itr);
+			std::cout <<"Pair elements are " << *itr1 << " and " << *itr << std::endl;
 			return true;
 		}
  	}
-
 	return false;
 }
 
