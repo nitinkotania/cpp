@@ -18,7 +18,7 @@ unordered_map<int, int> findPair(vector<int> & input, int target)
             //cout  << itr->second << " " << i << endl;
             //cout  << itr->first << " " << input[i] << endl;
             result.insert({itr->second, i});
-          //  break;
+            break;
         }
         else
         {
